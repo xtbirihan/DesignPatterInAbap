@@ -1,0 +1,19 @@
+CLASS zcl_sms DEFINITION
+  PUBLIC ABSTRACT
+  INHERITING FROM zcl_message
+  CREATE PUBLIC .
+
+PUBLIC SECTION.
+METHODS send_msg REDEFINITION.
+PROTECTED SECTION.
+PRIVATE SECTION.
+ENDCLASS.
+
+
+
+CLASS zcl_sms IMPLEMENTATION.
+  METHOD send_msg.
+    DATA(lv_phone) = go_contact_type->get_contact_info( iv_recipient )-phone.
+  ENDMETHOD.
+
+ENDCLASS.

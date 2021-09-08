@@ -1,0 +1,23 @@
+CLASS zcl_op_alv DEFINITION
+  PUBLIC
+  INHERITING FROM zcl_opdecorator
+  FINAL
+  CREATE PUBLIC .
+
+PUBLIC SECTION.
+    METHODS: process_output REDEFINITION.
+
+PROTECTED SECTION.
+PRIVATE SECTION.
+ENDCLASS.
+
+
+
+CLASS ZCL_OP_ALV IMPLEMENTATION.
+
+
+  METHOD process_output.
+    super->process_output( ).
+    WRITE: /(10) space, 'Generating ALV'.
+  ENDMETHOD.
+ENDCLASS.

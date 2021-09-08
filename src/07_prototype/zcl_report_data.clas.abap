@@ -1,0 +1,15 @@
+CLASS zcl_report_data DEFINITION PUBLIC ABSTRACT
+                      CREATE PUBLIC .
+
+PUBLIC SECTION.
+    METHODS: clone ABSTRACT
+      RETURNING VALUE(ro_object) TYPE REF TO zcl_report_data.
+    METHODS: select_data ABSTRACT.
+PROTECTED SECTION.
+PRIVATE SECTION.
+ENDCLASS.
+
+
+
+CLASS zcl_report_data IMPLEMENTATION.
+ENDCLASS.

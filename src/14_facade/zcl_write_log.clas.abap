@@ -1,0 +1,20 @@
+CLASS zcl_write_log DEFINITION
+  PUBLIC
+  FINAL
+  CREATE PUBLIC .
+
+PUBLIC SECTION.
+
+  INTERFACES zif_write .
+PROTECTED SECTION.
+PRIVATE SECTION.
+ENDCLASS.
+
+
+
+CLASS zcl_write_log IMPLEMENTATION.
+  METHOD zif_write~write_data.
+       WRITE: / 'writing data in Log'.
+  ENDMETHOD.
+
+ENDCLASS.

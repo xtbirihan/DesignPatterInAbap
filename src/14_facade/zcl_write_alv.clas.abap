@@ -1,0 +1,21 @@
+CLASS zcl_write_alv DEFINITION
+  PUBLIC
+  FINAL
+  CREATE PUBLIC .
+
+PUBLIC SECTION.
+
+  INTERFACES zif_write .
+PROTECTED SECTION.
+PRIVATE SECTION.
+ENDCLASS.
+
+
+
+CLASS zcl_write_alv IMPLEMENTATION.
+  METHOD zif_write~write_data.
+    WRITE: / 'Writing data in ALV'.
+
+  ENDMETHOD.
+
+ENDCLASS.
